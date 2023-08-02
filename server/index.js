@@ -20,7 +20,7 @@ app.use(
   cors({
     origin:
       process.env.NODE_ENV === "production"
-        ? "https://social-app-mernvercel-client.vercel.app"
+        ? "https://trikania-herbs-client.vercel.app"
         : "http://localhost:3000",
     credentials: true,
     preflightContinue: true,
