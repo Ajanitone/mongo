@@ -1,14 +1,14 @@
 import express from "express";
 import dotenv from "dotenv";
-import userRoutes from "./routes/userRoutes.js";
-import productRoutes from "./routes/productRoutes.js";
+import userRoutes from "./src/routes/userRoutes.js";
+import productRoutes from "./src/routes/productRoutes.js";
 // import commentRoutes from "./routes/commentRoutes.js";
-import dbConnect from "./config/db.js";
+import dbConnect from "./src/config/db.js";
 import cookieParser from "cookie-parser";
 import cors from "cors";
-import paymentRoutes from "./routes/paymentRoutes.js";
-import orderRoutes from "./routes/orderRoutes.js";
-import newsletterRoutes from "./routes/newsletterRoutes.js";
+import paymentRoutes from "./src/routes/paymentRoutes.js";
+import orderRoutes from "./src/routes/orderRoutes.js";
+import newsletterRoutes from "./src/routes/newsletterRoutes.js";
 dotenv.config();
 const app = express();
 
