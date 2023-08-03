@@ -16,6 +16,20 @@ dbConnect();
 
 // ...
 
+// app.use(
+//   cors({
+//     origin:
+//       process.env.NODE_ENV === "production"
+//         ? "https://trikania-herbs-client.vercel.app"
+//         : "http://localhost:3000",
+//     credentials: true,
+//      preflightContinue: true,
+//   })
+// );
+
+
+
+
 app.use(
   cors({
     origin:
@@ -23,7 +37,17 @@ app.use(
         ? "https://trikania-herbs-client.vercel.app"
         : "http://localhost:3000",
     credentials: true,
-     preflightContinue: true,
+    preflightContinue: true,
+  })
+);
+app.options(
+  "*",
+  cors({
+    origin:
+      process.env.NODE_ENV === "production"
+        ?  "https://trikania-herbs-client.vercel.app"
+        : "http://localhost:3000",
+    credentials: true,
   })
 );
 
