@@ -40,16 +40,16 @@ app.use(
     preflightContinue: true,
   })
 );
-app.options(
-  "*",
-  cors({
-    origin:
-      process.env.NODE_ENV === "production"
-        ?  "https://trikania-herbs-client.vercel.app"
-        : "http://localhost:3000",
-    credentials: true,
-  })
-);
+// app.options(
+//   "*",
+//   cors({
+//     origin:
+//       process.env.NODE_ENV === "production"
+//         ?  "https://trikania-herbs-client.vercel.app"
+//         : "http://localhost:3000",
+//     credentials: true,
+//   })
+// );
 
 
 
