@@ -23,7 +23,7 @@ app.use(
         ? "https://trikania-herbs-client.vercel.app"
         : "http://localhost:3000",
     credentials: true,
-    // preflightContinue: true,
+     preflightContinue: true,
   })
 );
 
