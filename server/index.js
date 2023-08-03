@@ -38,5 +38,22 @@ app.use("/payments", paymentRoutes);
 app.use("/orders", orderRoutes);
 app.use("/newsletters", newsletterRoutes);
 
+
+// 404 handler
+app.use((req, res, next) => {
+
+  const error = new Error('Error 404: Route not found')
+
+  next(error)
+})
+
+// Error Handler
+app.use((err, req, res, next) => {
+  console.log("🚀 ~ err", err)
+
+  res.status(err.statusCode)
+  res.send(err.message)
+})
+
 const port = process.env.PORT || 5001;
 app.listen(port, () => console.log("Server is up and running at port: ", port));
