@@ -38,8 +38,8 @@ export const login = async (req, res) => {
   try {
     console.log("🚀 ~ hello login ", req.body);
 
-    const errors = validationResult(req);
-    console.log("🚀 ~ errors", errors);
+    // const errors = validationResult(req);
+    // console.log("🚀 ~ errors", errors);
 
     if (!errors.isEmpty()) {
       // !errors.isEmpty() => there are errors
