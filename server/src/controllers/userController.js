@@ -41,10 +41,10 @@ export const login = async (req, res) => {
     // const errors = validationResult(req);
     // console.log("🚀 ~ errors", errors);
 
-    if (!errors.isEmpty()) {
-      // !errors.isEmpty() => there are errors
-      return res.send({ success: false, errors: errors.array() });
-    }
+    // if (!errors.isEmpty()) {
+    //   // !errors.isEmpty() => there are errors
+    //   return res.send({ success: false, errors: errors.array() });
+    // }
     const user = await User.findOne({
       $or: [
         { username: req.body.emailOrUsername },
